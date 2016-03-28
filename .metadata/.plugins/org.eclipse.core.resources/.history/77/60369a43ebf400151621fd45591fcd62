@@ -1,0 +1,100 @@
+/**
+ * 
+ */
+package com.frankstar.JavaStudy;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.text.MessageFormat;
+import java.util.Properties;
+
+/**
+ * @author frankstar
+ *
+ */
+public class ReadProperties {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		try {
+			readPropertiesBygetResourceAsStream();
+			System.out.println("");
+			readPropertiesByInputStream();
+		} catch (Exception e) {
+			e.printStackTrace();
+			
+		}
+
+	}
+
+	private static void readPropertiesByInputStream() {
+		// TODO Auto-generated method stub
+		
+		
+	}
+
+	private static void readPropertiesBygetResourceAsStream() {
+		// TODO Auto-generated method stub
+		// 使用getResourceAsStream方法读取properties
+		InputStream in1 = ReadProperties.class.getClassLoader()
+				.getResourceAsStream("config/properties/test1.properties");
+		
+		InputStream in2 = ReadProperties.class.getClassLoader()
+				.getResourceAsStream("test2.properties");
+		
+		InputStream in3 = ReadProperties.class.getClassLoader()
+				.getResourceAsStream("jdbc.properties");
+		
+		InputStream in4 = ReadProperties.class.getClassLoader()
+				.getResourceAsStream("config.properties");
+		
+		Properties p = new Properties();
+		System.out.println("使用getResourceAsStream方法读取properties");
+		
+		try {
+			System.out.println("<hr/>");
+			p.load(in1);
+			System.out.println("test1.properties:name=" + p.getProperty("name")
+					+ ",age=" + p.getProperty("age"));
+			System.out.println("---test2---");
+			System.out.println("<hr/>");
+			p.load(in2);
+			System.out.println("test2.properties:name=" + p.getProperty("name")
+					+ ",age=" + p.getProperty("age"));
+			System.out.println("---jdbc---");
+			System.out.println("<hr/>");
+			p.load(in3);
+			System.out.println(MessageFormat.format("jdbc.properties:jdbc.driver={0},jdbc.url={1}"
+					+ ",jdbc.username={2},jdbc.password={3}", p.getProperty("jdbc.driver"), p.getProperty("jdbc.url")
+					, p.getProperty("jdbc.username"), p.getProperty("jdbc.password")));
+			System.out.println("---config---");
+			System.out.println("<hr/>");
+			p.load(in4);
+			System.out.println("config.properties:dbuser=" + p.getProperty("dbuser")
+					+ ",dbpassword=" + p.getProperty("dbpassword") + p.getProperty("database"));
+			System.out.println("<hr/>");
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			if (in1 != null) {
+				try {
+					in1.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+			if (in2 != null) {
+				try {
+				in2.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+		
+	}
+
+}

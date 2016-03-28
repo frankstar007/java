@@ -1,0 +1,44 @@
+/**
+ * 
+ */
+package com.frankstar.JavaStudy;
+
+import java.io.InputStream;
+
+/**
+ * @author frankstar
+ *
+ */
+public class ReadProperties {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		try {
+			readPropertiesBygetResourceAsStream();
+			System.out.println("");
+			readPropertiesByInputStream();
+		} catch (Exception e) {
+			e.printStackTrace();
+			
+		}
+
+	}
+
+	private static void readPropertiesByInputStream() {
+		// TODO Auto-generated method stub
+		
+		
+	}
+
+	private static void readPropertiesBygetResourceAsStream() {
+		// TODO Auto-generated method stub
+		// 使用getResourceAsStream方法读取properties
+		InputStream in = ReadProperties.class.getClassLoader()
+				.getResourceAsStream("config/properties/test1.properties");
+		
+	}
+
+}

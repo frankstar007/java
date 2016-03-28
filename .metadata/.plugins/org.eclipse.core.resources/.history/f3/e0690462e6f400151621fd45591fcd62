@@ -1,0 +1,38 @@
+/**
+ * 
+ */
+package com.frankstar.JavaStudy;
+
+/**
+ * @author frankstar
+ *
+ */
+public class ReadProperties {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		try {
+			readPropertiesBygetResourceAsStream();
+			System.out.println("");
+			readPropertiesByInputStream();
+		} catch (Exception e) {
+			e.printStackTrace();
+			
+		}
+
+	}
+
+	private static void readPropertiesByInputStream() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private static void readPropertiesBygetResourceAsStream() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
