@@ -1,0 +1,24 @@
+/**
+ * 
+ */
+package com.frankstar.Thread;
+
+/**
+ * @author frankstar
+ *
+ */
+public class RunnableImplement implements Runnable {
+	private String name;
+	
+	public RunnableImplement(String name) {
+		super(name);
+	}
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+
+}

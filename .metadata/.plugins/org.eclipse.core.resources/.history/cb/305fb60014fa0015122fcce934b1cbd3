@@ -1,0 +1,23 @@
+/**
+ * 
+ */
+package com.frankstar.Thread;
+
+/**
+ * @author frankstar
+ * 生产者－消费者问题
+ * 1.共享数据的不一致性／临界资源的保护
+ * 2.java对象锁的概念
+ * 3.synchronized关键字/wait() notify()
+ */
+public class ProducerConsumer {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

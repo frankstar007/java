@@ -1,0 +1,59 @@
+/**
+ * 
+ */
+package com.frankstar.Thread;
+
+/**
+ * @author frankstar
+ * 测试同步
+ *
+ */
+public class SyncThread  implements Runnable{
+	
+	Timer timer = new Timer();
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		SyncThread st = new SyncThread();
+		Thread t1 = new Thread(st);
+		Thread t2 = new Thread(st);
+		t1.setName("frank");
+		t2.setName("star");
+		t1.start();
+		t2.start();
+		
+
+	}
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		timer.add(Thread.currentThread().getName());
+	}
+
+}
+
+class Timer {
+	private static int num = 0;
+	
+	public /*synchronized */void add(String name) {
+		//在声明方法时加入synchronized表示执行这个方法的过程中当前对象被锁定
+		synchronized(this) {
+			//锁定当前对象
+			num++;
+			try {
+				Thread.sleep(1);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			
+			System.out.println(name + ": 你是第" + num + "个使用timer");
+		}
+		
+	}
+	
+	
+}

@@ -1,0 +1,38 @@
+/**
+ * 
+ */
+package com.frankstar.test;
+
+/**
+ * @author frankstar
+ *
+ */
+public class Test2 {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+class Value {
+	static int c = 0;
+	Value(){
+		c = 15;
+	}
+	Value(int i) {
+		c = i;
+	}
+	static void inc () {
+		c++;
+	}
+}
+class Count {
+	public static void prt(String s) {
+		System.out.println(s);
+	}
+	Value v = new Value(10);
+}

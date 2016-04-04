@@ -1,0 +1,24 @@
+/**
+ * 
+ */
+package com.frankstar.test;
+
+/**
+ * @author frankstar
+ *
+ */
+public class Test {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String a = "foo";
+		String b = "foo";
+		
+		System.out.print(a==b);
+
+	}
+
+}

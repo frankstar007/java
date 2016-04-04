@@ -1,0 +1,45 @@
+/**
+ * 
+ */
+package com.frankstar.Thread;
+
+/**
+ * @author frankstar
+ *
+ */
+public class ThreadYield {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		TestYieldThread tyt1 = new TestYieldThread("frank");
+		TestYieldThread tyt2 = new TestYieldThread("star");
+		
+		tyt1.start();
+		tyt2.start();
+		
+		for (int i = 0; i <= 5; i++) {
+			System.out.println("I am main Thread!);
+		}
+
+	}
+
+}
+
+class TestYieldThread extends Thread {
+	//构造方法
+	public TestYieldThread(String name) {
+		super(name);
+	}
+	
+	public void run() {
+		for (int i = 0; i <= 5; i++) {
+			System.out.println(getName() + ": " + i);
+			if (i % 2 == 0) {
+				yield();//当执行到i能被2整除时当前执行的线程就让出来让另一个在执行run()方法的线程来优先执行
+			}
+		}
+	}
+}

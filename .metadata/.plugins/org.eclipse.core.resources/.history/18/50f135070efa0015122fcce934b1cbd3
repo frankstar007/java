@@ -1,0 +1,37 @@
+/**
+ * 
+ */
+package com.frankstar.Thread;
+
+/**
+ * @author frankstar
+ * 线程死锁问题
+ */
+public class LockThread implements Runnable {
+	public int flag = 1;
+	static Object o1 = new Object(), o2 = new Object();
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		System.out.println(Thread.currentThread().getName() + " flag = " + flag);
+		
+		if (flag == 1) {
+			synchronized (o1) {
+				try {
+					Thread.sleep(500);
+				}
+			}
+		}
+	
+	}
+
+}

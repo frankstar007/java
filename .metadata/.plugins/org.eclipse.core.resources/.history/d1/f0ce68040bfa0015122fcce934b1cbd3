@@ -1,0 +1,37 @@
+/**
+ * 
+ */
+package com.frankstar.Thread;
+
+/**
+ * @author frankstar
+ * 测试同步
+ *
+ */
+public class SyncThread {
+	
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+class Timer {
+	private static int num = 0;
+	
+	public /*synchronized */void add(String name) {
+		//在声明方法时加入synchronized表示执行这个方法的过程中当前对象被锁定
+		synchronized(this) {
+			//锁定当前对象
+			num++;
+		}
+		
+	}
+	
+	
+}
