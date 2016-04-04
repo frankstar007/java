@@ -1,0 +1,68 @@
+/**
+ * 
+ */
+package com.frankstar.Thread;
+
+/**
+ * @author frankstar
+ * 线程死锁问题
+ */
+public class LockThread implements Runnable {
+	public int flag = 1;
+	static Object o1 = new Object(), o2 = new Object();
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		LockThread lt1 = new LockThread();
+		LockThread lt2 = new LockThread();
+		
+		lt1.flag = 1;
+		lt2.flag = 0;
+		
+		Thread t1 = new Thread(lt1);
+		Thread t2 = new Thread(lt2);
+		
+		t1.setName("frank");
+		t2.setName("star");
+		t1.start();
+		t2.start();
+	}
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		System.out.println(Thread.currentThread().getName() + " flag = " + flag);
+		
+		if (flag == 1) {
+			synchronized (o1) { //锁定o1对象
+				try {
+					Thread.sleep(500);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+				synchronized(o2) {
+					System.out.println("1");
+				}
+			}
+			
+		}
+		if (flag == 0) {
+			synchronized (o2) { //锁定o1对象
+				try {
+					Thread.sleep(500);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+				synchronized(o1) {
+					System.out.println("1");
+				}
+			}
+			
+		}
+	
+	}
+
+}

@@ -1,0 +1,29 @@
+/**
+ * 
+ */
+package com.frankstar.Thread;
+
+/**
+ * @author frankstar
+ *
+ */
+public class ThreadJoin {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+class TestJoinThread extends Thread {
+	//构造方法
+	public TestJoinThread(String name) {
+		super(name);
+	}
+	
+	
+}

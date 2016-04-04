@@ -1,0 +1,33 @@
+/**
+ * 
+ */
+package com.frankstar.Thread;
+
+/**
+ * @author frankstar
+ *
+ */
+public class ThreadYield {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+class TestYieldThread extends Thread {
+	//构造方法
+	public TestYieldThread(String name) {
+		super(name);
+	}
+	
+	public void run() {
+		for (int i = 0; i <= 5; i++) {
+			System.out.println(getName() + ": " + i);
+		}
+	}
+}

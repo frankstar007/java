@@ -1,0 +1,42 @@
+/**
+ * 
+ */
+package com.frankstar.Thread;
+
+import java.util.Date;
+
+/**
+ * @author frankstar
+ * 线程sleep方法
+ */
+public class ThreadSleep {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		TestThread tt = new TestThread();
+		tt.start();
+		try {
+			TestThread.sleep(1000);
+		}
+
+	}
+
+}
+
+class TestThread extends Thread {
+	boolean flag = true;
+	
+	public void run() {
+		while(flag) {
+			System.out.println(new Date().toLocaleString());
+			try {
+				sleep(1000);
+			} catch (InterruptedException e) {
+				return;
+			}
+		}
+	}
+}
