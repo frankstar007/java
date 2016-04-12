@@ -1,0 +1,54 @@
+/**
+ * 
+ */
+package com.frankstar.WebSpider;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.URL;
+import java.net.URLConnection;
+
+/**
+ * @author frankstar
+ *
+ */
+public class MainSpider {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//定义即将访问的连接
+		String url = "http://www.baidu.com";
+		//定义一个字符串来存储网页内容
+		String result = "";
+		//定义一个缓冲字符输出流
+		BufferedReader in = null;
+		
+		try{
+			//将String转换为url对象
+			URL realUrl = new URL(url);
+			//初始化一个链接到那个URL的链接
+			URLConnection uc = realUrl.openConnection();
+			//开始实际的链接
+			uc.connect();
+			//初始化输入流来读取URL的相应
+			in = new BufferedReader(new InputStreamReader(uc.getInputStream()));
+		} catch (Exception e){
+			System.out.println("发送GET请求出现异常！" + e);
+			e.printStackTrace();
+		}
+		//使用finally来关闭输入流
+		finally {
+			try {
+				if(in != null){
+					in.close();
+				}
+			}catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}
+	}
+
+}

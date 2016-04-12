@@ -1,0 +1,24 @@
+/**
+ * 
+ */
+package com.frankstar.studyThread;
+
+/**
+ * @author frankstar
+ * @function Runnable
+ */
+public class FsThread implements Runnable{
+
+	/**
+	 * @param args
+	 */
+	private String name;
+	public FsThread(String name){
+		this.name = name;
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

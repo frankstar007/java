@@ -1,0 +1,80 @@
+/**
+ * 
+ */
+package com.frankstar.WebSpider;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.URL;
+import java.net.URLConnection;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+/**
+ * @author frankstar
+ *
+ */
+public class MainSpider {
+
+	public static String getResult(String url) {
+		// TODO Auto-generated method stub
+		//定义即将访问的连接
+		//String url = "http://www.baidu.com";
+		//定义一个字符串来存储网页内容
+		String result = "";
+		//定义一个缓冲字符输出流
+		BufferedReader in = null;
+		
+		try{
+			//将String转换为url对象
+			URL realUrl = new URL(url);
+			//初始化一个链接到那个URL的链接
+			URLConnection uc = realUrl.openConnection();
+			//开始实际的链接
+			uc.connect();
+			//初始化输入流来读取URL的相应
+			in = new BufferedReader(new InputStreamReader(uc.getInputStream()));
+			//用来临时存储抓去到的每一行数据
+			String line;
+			while ((line = in.readLine()) != null) {
+				result += line;
+			}
+		} catch (Exception e){
+			System.out.println("发送GET请求出现异常！" + e);
+			e.printStackTrace();
+		}
+		//使用finally来关闭输入流
+		finally {
+			try {
+				if(in != null){
+					in.close();
+				}
+			}catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}
+		//System.out.println(result);
+		return result;
+	}
+	public static String RegexString(String targetStr, String patternStr) {
+		//定义一个样式模版，此中使用正则表达式，括号中是要抓去的内容
+		Pattern pattern = Pattern.compile(patternStr);
+		//定义一个match来匹配
+		Matcher matcher = pattern.matcher(targetStr);
+		//若果找到了返回
+		if (matcher.find()) {
+			return matcher.group(1);
+		}
+		
+		return "";
+		
+	}
+	public static void main(String[] args) {
+		String url = "http://www.baidu.com";
+		String result = getResult(url);
+		//使用正则匹配图片的src内容
+		String imgSrc = RegexString(result)
+		
+	}
+
+}
