@@ -1,0 +1,27 @@
+/**
+ * 
+ */
+package com.frankstar.CollectionStudy;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * @author frankstar
+ *  有序集合的访问
+ */
+public class ArrayListDemo {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		List<String> arrList = new ArrayList<String>();
+		
+		arrList.add("a");
+		arrList.add("b");
+		arrList.add("c");
+	}
+
+}

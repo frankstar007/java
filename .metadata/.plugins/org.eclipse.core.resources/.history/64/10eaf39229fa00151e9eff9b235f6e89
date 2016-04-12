@@ -1,0 +1,20 @@
+/**
+ * 
+ */
+package com.frankstar.SocketStudy;
+
+/**
+ * @author frankstar
+ *
+ */
+public class ClientSocket {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Socket s = new Socket("127.0.0.1",6666);
+	}
+
+}

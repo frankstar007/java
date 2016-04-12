@@ -1,0 +1,13 @@
+package com.frankstar;
+
+public class CreateInnerInstance {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Out.In in = new Out().new In("frankstar");
+		Out out = new Out();
+		in1 = out.new In("star");
+
+	}
+
+}

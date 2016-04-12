@@ -1,0 +1,32 @@
+/**
+ * 
+ */
+package com.frankstar.CollectionStudy;
+
+/**
+ * @author frankstar
+ * MyHashMap
+ */
+public class MyHashMap<K, V> {
+	private Entry[] table;//Entry数组表
+	static final int DEFAULT_INITIAL_CAPACITY = 16;//默认数组长度
+	private int size;
+	
+	//构造函数
+	public MyHashMap()
+	{
+		table = new Entry[DEFAULT_INITIAL_CAPACITY];
+		size = DEFAULT_INITIAL_CAPACITY;
+	}
+	//获取数组长度
+	public int getSize() 
+	{
+		return size;
+	}
+	//求index
+	static int indexFor(int h, int length)
+	{
+		return h % (length - 1);
+	}
+
+}

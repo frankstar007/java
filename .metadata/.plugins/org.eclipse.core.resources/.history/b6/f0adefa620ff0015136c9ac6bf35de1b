@@ -1,0 +1,26 @@
+/**
+ * 
+ */
+package com.frankstar;
+
+/**
+ * @author frankstar
+ * 测试内部类
+ */
+public class Cow {
+	private double weight;
+	public Cow();
+	public Cow(double weight)
+	{
+		this.weight = weight;
+	}
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

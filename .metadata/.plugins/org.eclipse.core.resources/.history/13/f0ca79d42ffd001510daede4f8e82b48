@@ -1,0 +1,32 @@
+/**
+ * 
+ */
+package com.frankstar.CollectionStudy;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * @author frankstar
+ * 
+ */
+public class LinkedListTest {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		List<String> list = new ArrayList<String>();
+		list.add("a");
+		list.add("b");
+		list.add("c");
+		System.out.println(list);
+		
+		List<String> b = new ArrayList<String>();
+		b.add("d");
+		b.add("e");
+		b.add("f");
+	}
+
+}

@@ -1,0 +1,27 @@
+/**
+ * 
+ */
+package com.frankstar.CollectionStudy;
+
+import java.util.HashSet;
+import java.util.Set;
+
+/**
+ * @author frankstar
+ * SetTest
+ */
+public class SetClass {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Set<String> words = new HashSet<String>();
+		
+		//通过输入流代开文献
+		//1.不需要抛出异常
+		InputStream inStream = SetClass.class.getResourceAsStream("frank.txt")
+	}
+
+}

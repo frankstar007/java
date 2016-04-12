@@ -1,0 +1,30 @@
+/**
+ * 
+ */
+package com.frankstar.CollectionStudy;
+
+import java.util.HashSet;
+import java.util.Set;
+
+/**
+ * @author frankstar
+ *	hashsetDemo
+ */
+public class HashSetDemo {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Set<String> set = new HashSet<String>();
+		
+		set.add("a");
+		set.add("b");
+		set.add("c");
+		set.add("d");
+		
+		
+	}
+
+}
