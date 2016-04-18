@@ -1,0 +1,20 @@
+/**
+ * 
+ */
+package com.frankstar;
+
+/**
+ * @author frankstar
+ * @function newCachedThreadPool 创建一个可缓存的线程池
+ */
+public class ThreadPoolExecutorsTest {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

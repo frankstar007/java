@@ -1,0 +1,11 @@
+package com.frankstar;
+
+//链式队列
+public class LinkQueue {
+	//链的数据接口
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

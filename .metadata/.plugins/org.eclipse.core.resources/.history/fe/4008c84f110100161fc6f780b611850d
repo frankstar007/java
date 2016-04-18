@@ -1,0 +1,20 @@
+/**
+ * 
+ */
+package com.frankstar;
+
+/**
+ * @author frankstar
+ * @function 使用工具类写一个简单爬取百度的Demo
+ */
+public class Spider {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

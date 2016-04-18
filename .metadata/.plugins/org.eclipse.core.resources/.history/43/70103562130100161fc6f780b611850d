@@ -1,0 +1,35 @@
+/**
+ * 
+ */
+package com.frankstar;
+
+import java.io.InputStream;
+import java.io.OutputStream;
+
+import org.apache.commons.httpclient.HttpClient;
+
+
+
+/**
+ * @author frankstar
+ * @function 使用工具类写一个简单爬取百度的Demo
+ */
+public class Spider {
+
+	private static HttpClient httpClient = new HttpClient();
+	
+	public static boolean downloadPage(String path) {
+		//定义输入输出流
+		InputStream input = null;
+		OutputStream output = null;
+		//得到Post方法
+		GetMethod getMethod = new GetMethod();
+		return false;
+		
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

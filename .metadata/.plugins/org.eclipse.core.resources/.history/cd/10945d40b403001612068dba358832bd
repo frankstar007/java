@@ -1,0 +1,51 @@
+/**
+ * 
+ */
+package com.frankstar.Nlp;
+
+import java.util.HashSet;
+import java.util.Set;
+
+/**
+ * @author frankstar
+ *
+ */
+public class MatrixDemo<T> {
+	//定义每一个节点
+	public Node node;
+	//可能组成的词集
+	public Set<String> s = new HashSet<String>();
+	
+	//提供汉字矩阵
+	public void createMatrix(Node node) {
+		
+		
+		
+		
+	}
+	
+	class Node {
+		public T data;
+		public Node left;
+		public Node right;
+		public Node up;
+		public Node down;
+		
+		public Node(){}
+		
+		public Node(T data, Node l, Node r, Node u, Node d){
+			this.data = data;
+			this.down = d;
+			this.left = l;
+			this.up = u;
+			this.right = r;		
+		}
+		
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

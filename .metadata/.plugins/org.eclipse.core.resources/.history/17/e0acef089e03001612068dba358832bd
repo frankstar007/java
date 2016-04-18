@@ -1,0 +1,20 @@
+/**
+ * 
+ */
+package com.frankstar;
+
+/**
+ * @author frankstar
+ * 循环队列
+ */
+public class CirQueue {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

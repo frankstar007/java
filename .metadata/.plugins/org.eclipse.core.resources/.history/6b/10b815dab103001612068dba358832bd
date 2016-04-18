@@ -1,0 +1,20 @@
+/**
+ * 
+ */
+package com.frankstar.Nlp;
+
+/**
+ * @author frankstar
+ *
+ */
+public class MatrixDemo {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

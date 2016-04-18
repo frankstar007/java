@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package com.frankstar;
+
+/**
+ * @author frankstar
+ * @function下载网页的工具类
+ */
+public class DownTool {
+
+}

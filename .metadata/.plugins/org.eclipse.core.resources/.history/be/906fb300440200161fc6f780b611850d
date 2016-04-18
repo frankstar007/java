@@ -1,0 +1,20 @@
+/**
+ * 
+ */
+package com.frankstar.CollectionStudy;
+
+/**
+ * @author frankstar
+ * @function 学习hashmap
+ */
+public class MapDemo1 {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		HashMap<String,Integer> map = new HashMap<String, Integer>();
+	}
+
+}

@@ -1,0 +1,36 @@
+/**
+ * 
+ */
+package com.frankstar;
+
+/**
+ * @author frankstar
+ * 循环队列
+ */
+public class CirQueue<E> {
+
+	//对象数组
+	E[] a;
+	// 默认初始化大小
+	private static final int DEFAULT_SIZE = 10;
+	//队首
+	int front;
+	//队尾
+	int rear;
+	
+	public CirQueue() {
+		this(DEFAULT_SIZE);
+	}
+	
+	public CirQueue(int defaultSize) {
+		a = (E[])(new Object[defaultSize]);
+		front = 0;
+		rear = 0;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,23 @@
+/**
+ * 
+ */
+package com.frankstar;
+
+/**
+ * @author frankstar
+ * @function Java虚拟机类加载机制
+ */
+class SSClass {
+	static {
+		System.out.println("SSClass");
+	}
+	
+}
+public class NotInitialization {
+
+	
+	public static void main(String[] args) {
+
+	}
+
+}

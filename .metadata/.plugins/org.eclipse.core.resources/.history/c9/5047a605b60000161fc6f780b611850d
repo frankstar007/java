@@ -1,0 +1,44 @@
+/**
+ * 
+ */
+package com.frankstar.WebSpider;
+
+import java.util.ArrayList;
+
+/**
+ * @author frankstar
+ * @ 知乎类
+ */
+public class Zhihu {
+	public String question;
+	public String qDescription;
+	public String qLink;
+	public ArrayList<String> answers;
+	
+	//构造方法初始化数据
+	public Zhihu(String url) {
+		question = "";
+		qDescription = "";
+		qLink = "";
+		answers = new ArrayList<String>();
+		//判断url 是否合法
+		if(getRealURl(url)) {
+			System.out.println("正在抓取： " + qLink);
+		}
+	}
+	
+	private boolean getRealURl(String url) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public String toString() {
+		return "问题： " + question + 
+				"\n描述：" + qDescription +
+				"\n链接：" + qLink + 
+				"\n回答：" + answers + "\n";
+	}
+	
+	
+
+}

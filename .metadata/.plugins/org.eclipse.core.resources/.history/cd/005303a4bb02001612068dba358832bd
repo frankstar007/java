@@ -1,0 +1,86 @@
+/**
+ * 
+ */
+package com.frankstar;
+
+/**
+ * @author frankstar
+ * 构造二叉树 二叉树的链式存储
+ */
+public class BinaryTree {
+	//private TreeNode root = null;
+	private Node root;
+	private class Node {
+		Node left;
+		Node right;
+		int data;
+		
+		Node(int newData) {
+			left = null;
+			right = null;
+			data = newData;
+		}
+	}
+	
+	public boolean lookUp(int data) {
+		return (lookUp(root, data));
+	}
+	
+	public boolean lookUp(Node node, int data) {
+		if (node == null)
+			return false;
+		if (data == node.data) {
+			return true;
+		} else if (data < node.data) {
+			return lookUp(node.left, data);
+		} else {
+			return lookUp(node.right, data);
+		}
+	}
+	
+	public void insert (int data) {
+		root = insert(root, data);
+	}
+
+	private Node insert(Node node, int data) {
+		if (node == null) {
+			return new Node(data);
+		} else {
+			if (data <= node.data) {
+				node.left = insert(node.left, data);
+			} else {
+				node.right = insert(node.right, data);
+			}
+		}
+		return node;
+	}
+	
+	public void printInOrder() {
+		printInOrder(root);
+		System.out.println();
+	}
+
+	private void printInOrder(Node node) {
+		if (node == null) {
+			return;
+		}
+		printInOrder(node.left);
+		System.out.println(node.data + " ");
+		printInOrder(node.right);
+	}
+	
+	public void printPreOrder() {
+		printPreOrder(root);
+		System.out.println();
+	}
+
+	private void printPreOrder(Node node) {
+		if (node == null) {
+			return;
+		}
+		System.out.println(node.data + " ");;
+		printInOrder(node.left);
+		printPreOrder(node.right);
+		
+	}
+}

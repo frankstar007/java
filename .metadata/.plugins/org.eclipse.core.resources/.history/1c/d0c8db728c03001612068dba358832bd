@@ -1,0 +1,46 @@
+/**
+ * 
+ */
+package com.frankstar;
+
+/**
+ * @author frankstar
+ * 栈的链式存储结构
+ */
+public class LinkStack<T> {
+	//定义节点数据结构
+	private class Node {
+		public T data;
+		public Node next;
+		
+		//无参数
+		public Node() {}
+		//参数
+		public Node(T data, Node next) {
+			data = data;
+			next = next;
+		}
+	}
+	
+	//栈顶元素
+	private Node top;
+	//元素个数
+	private int size;
+	//入栈
+	public void insert(T element) {
+		top = new Node(element, top);
+		size ++;	
+	}
+	//出栈
+	public T pop() {
+		Node temp = top;
+		top = top.next;
+		temp.next = null;
+	}
+	//返回栈顶元素 但是不出栈
+	public T peek() {
+		return top.data;
+	}
+	
+	
+}

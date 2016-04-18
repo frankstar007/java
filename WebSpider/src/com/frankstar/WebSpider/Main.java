@@ -1,0 +1,29 @@
+/**
+ * 
+ */
+package com.frankstar.WebSpider;
+
+import java.util.ArrayList;
+
+/**
+ * @author frankstar
+ * @function Main方法调用
+ *
+ */
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//定义即将访问的链接
+		String url = "http://www.zhihu.com/explore/recommendations";
+		String content = Spider.getResults(url);
+		//System.out.println(content);
+		ArrayList<Zhihu> myZhihu = Spider.getZhihu(content);
+		//System.out.println(myZhihu);
+		for (Zhihu zhihu : myZhihu) {
+			FileReaderWriter.writeIntoFile(zhihu.writeString(), "/Users/frankstar/Desktop/zhihu.txt", true);
+		}
+		
+	}
+
+}
