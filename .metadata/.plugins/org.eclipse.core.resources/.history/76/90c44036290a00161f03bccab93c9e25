@@ -1,0 +1,6 @@
+package com.frankstar.mybatis.inter;
+
+public interface IUserOperation {
+	public User selectUserByID(int id);
+
+}

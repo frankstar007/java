@@ -1,0 +1,30 @@
+/**
+ * 
+ */
+package com.frankstar.mybatis.test;
+
+import java.io.Reader;
+
+import org.apache.ibatis.io.Resources;
+import org.apache.ibatis.session.SqlSessionFactory;
+
+/**
+ * @author frankstar
+ * @function 测试mybatis的demo
+ */
+public class Demo1 {
+
+	private static SqlSessionFactory sqlSessionFactory;
+	private static Reader reader;
+	
+	static{
+		try {
+			reader = Resources.getResourceAsReader("Configuration.xml")
+		}
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

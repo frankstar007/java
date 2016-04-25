@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package com.frankstar.mybatis.model;
+
+/**
+ * @author frankstar
+ *
+ */
+public class User {
+
+}

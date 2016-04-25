@@ -1,0 +1,21 @@
+/**
+ * 
+ */
+package com.frankstar.mybatis.test;
+
+import org.apache.ibatis.session.SqlSessionFactory;
+
+/**
+ * @author frankstar
+ * @function 测试mybatis的demo
+ */
+public class Demo1 {
+
+	private static SqlSessionFactory sqlSessionFactory;
+	private static Reader reader;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,2 @@
+127.0.0.1 - - [24/Apr/2016:22:26:17 +0800] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [24/Apr/2016:22:26:18 +0800] "GET /MyBatis_Study/WEB-INF/classes/com/frankstar/mybatis/test/Demo1.java HTTP/1.1" 404 992

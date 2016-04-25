@@ -1,0 +1,24 @@
+/**
+ * 
+ */
+package com.frankstar.mybatis.model;
+
+/**
+ * @author frankstar
+ * @function 创建用户类
+ */
+public class User {
+	private int id;
+	private String userName;
+	private String userAge;
+	private String userAddress;
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	
+	
+
+}
