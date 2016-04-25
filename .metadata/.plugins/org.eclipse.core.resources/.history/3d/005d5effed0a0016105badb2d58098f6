@@ -1,0 +1,5 @@
+package com.frankstar.mybatis.model;
+
+public class Article {
+
+}

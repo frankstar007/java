@@ -4,3 +4,7 @@
 1461506561706	Encapsulate field 'userName'
 1461506569636	Encapsulate field 'userAge'
 1461506575820	Encapsulate field 'userAddress'
+1461592807238	Encapsulate field 'id'
+1461592811920	Encapsulate field 'user'
+1461592818612	Encapsulate field 'title'
+1461592822633	Encapsulate field 'content'

@@ -10,7 +10,7 @@ package com.frankstar.mybatis.model;
 public class User {
 	private int id;
 	private String userName;
-	private String userAge;
+	private int userAge;
 	private String userAddress;
 	public int getId() {
 		return id;
@@ -24,10 +24,10 @@ public class User {
 	public void setUserName(String userName) {
 		this.userName = userName;
 	}
-	public String getUserAge() {
+	public int getUserAge() {
 		return userAge;
 	}
-	public void setUserAge(String userAge) {
+	public void setUserAge(int userAge) {
 		this.userAge = userAge;
 	}
 	public String getUserAddress() {
