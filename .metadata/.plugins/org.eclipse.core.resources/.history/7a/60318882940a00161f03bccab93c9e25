@@ -1,0 +1,18 @@
+/**
+ * 
+ */
+package com.frankstar.javaExam;
+
+/**
+ * @author frankstar
+ * @fuction 测试线程池
+ */
+public class TestThreadPool {
+
+	private static int produceTaskSleepTime = 2000;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

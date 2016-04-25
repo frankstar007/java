@@ -1,0 +1,17 @@
+package com.frankstar.javaExam;
+
+import java.io.Serializable;
+
+class Student implements Serializable {
+	private static final long serialVersionUID = 1l;
+	private String name;
+	private int age;
+}
+public class ExamSerializble {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
