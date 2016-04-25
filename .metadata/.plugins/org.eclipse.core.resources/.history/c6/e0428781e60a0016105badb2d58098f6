@@ -51,7 +51,6 @@ public class Demo2 {
 			session.close();
 		}
 		Demo2 users = new Demo2();
-		users.getUserList("%");
 	}
 
 }

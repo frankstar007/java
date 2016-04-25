@@ -29,11 +29,7 @@ public class Demo2 {
 		try {
 			IUserOperation userOperation = session.getMapper(IUserOperation.class);
 			List<User> users = userOperation.selectUsers(userName);
-			for(User user:users) {
-				System.out.println(user.getId() + ":" + user.getUserName() + ":" + user.getUserAge());
-			}
-		} finally {
-			session.close();
+			
 		}
 	}
 	public static SqlSessionFactory getSession() {
@@ -50,8 +46,6 @@ public class Demo2 {
 		} finally {
 			session.close();
 		}
-		Demo2 users = new Demo2();
-		users.getUserList("%");
 	}
 
 }

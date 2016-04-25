@@ -6,4 +6,14 @@
     <select id="selectUserByID" parameterType="int" resultType="User">
         select * from `user` where id = #{id}
     </select>
+    <resultMap type="User" id="resultListUser">
+    	<id column="id" property="id"></id>
+    	<result column="userName" property="userName"></result>
+    	<result column="userAge" property="userAge"></result>
+    	<result column="userAddress" property="userAddress"></result>
+    </resultMap>
+    <select id="selectUsers" parameterType="string" resultMap="resultListUser">
+    	select * from user where userName like #{userName}
+    </select>
 </mapper>
+
