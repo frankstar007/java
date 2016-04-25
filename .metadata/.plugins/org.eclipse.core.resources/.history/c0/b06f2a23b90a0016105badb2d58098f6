@@ -1,0 +1,20 @@
+/**
+ * 
+ */
+package com.frankstar.javaExam;
+
+/**
+ * @author frankstar
+ * @function 通过反射实例化一个类
+ */
+public class NewInstanceTest {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

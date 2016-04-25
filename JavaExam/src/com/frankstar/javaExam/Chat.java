@@ -77,6 +77,7 @@ public class Chat {
 	public static void main(String[] args) throws Exception{
 		// TODO Auto-generated method stub
 		//args 接收端口号 发送端口 对方接受端口
+		System.out.println("frankstar");
 		new ReceiveThread(Integer.parseInt(args[0])).start();
 		new SendThread(Integer.parseInt(args[1]), Integer.parseInt(args[2])).start();;
 	}

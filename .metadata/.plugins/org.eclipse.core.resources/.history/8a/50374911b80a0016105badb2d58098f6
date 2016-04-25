@@ -1,0 +1,15 @@
+package com.frankstar.javaExam;
+
+class MethodTestClass{
+	public void m1() {
+		System.out.println("m1 is called!");
+	}
+}
+public class CallMethodTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

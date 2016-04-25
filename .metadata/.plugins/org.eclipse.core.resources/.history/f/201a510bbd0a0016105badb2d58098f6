@@ -1,0 +1,17 @@
+package com.frankstar.javaExam;
+
+//使用反射覆盖数据对象的toString方法
+class DataObject {
+	private String name;
+	private String desc;
+	private String other;
+	private int age;
+}
+public class DataObjectTest {
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

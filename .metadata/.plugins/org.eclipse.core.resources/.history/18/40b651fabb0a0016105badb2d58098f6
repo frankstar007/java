@@ -1,0 +1,20 @@
+/**
+ * 
+ */
+package com.frankstar.javaExam;
+
+/**
+ * @author frankstar
+ *
+ */
+public class PrivateTest {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

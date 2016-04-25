@@ -1,0 +1,20 @@
+/**
+ * 
+ */
+package com.frankstar.javaExam;
+
+import java.net.Socket;
+
+/**
+ * @author frankstar
+ * @function 客户端Tcp编程
+ */
+public class TcpClientA {
+
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Socket socket = new Socket("127.0.0.1", 8888);
+	}
+
+}

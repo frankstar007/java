@@ -1,0 +1,27 @@
+/**
+ * 
+ */
+package com.frankstar.javaExam;
+
+/**
+ * @author frankstar
+ * @function 使用反射访问类的私有成员
+ */
+class PrivateTestClass {
+	private String name;
+	
+	public PrivateTestClass(String name) {
+		super();
+		this.name = name;
+	}
+}
+public class PrivateTest {
+
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		PrivateTestClass obj = new PrivateTestClass("frankstar");
+		Class clazz = obj.getClass();
+	}
+
+}

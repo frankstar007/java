@@ -1,0 +1,9 @@
+package com.frankstar.javaExam;
+
+public class TcpClientB {
+
+	public static void main(String[] args) {
+		
+	}
+
+}

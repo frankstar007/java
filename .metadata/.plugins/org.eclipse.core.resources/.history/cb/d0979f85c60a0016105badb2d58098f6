@@ -1,0 +1,16 @@
+package com.frankstar.javaExam;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.Socket;
+import java.net.UnknownHostException;
+
+public class TcpClientB {
+
+	public static void main(String[] args) throws UnknownHostException, IOException {
+		Socket socket = new Socket("localhost", 8888);
+		InputStream inputStream = socket.getInputStream();
+		
+	}
+
+}

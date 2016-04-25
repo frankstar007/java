@@ -1,0 +1,18 @@
+/**
+ * 
+ */
+package com.frankstar.javaExam;
+
+/**
+ * @author frankstar
+ * @function udpClient客户端编程
+ */
+public class UdpClientA {
+
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
