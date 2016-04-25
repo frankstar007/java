@@ -1,0 +1,15 @@
+/**
+ * 
+ */
+package com.frankstar;
+
+/**
+ * @author frankstar
+ * @function 宽度优先的队列
+ *  自定义队列类 保存TODO 表
+ */
+public class Queue {
+	//定义一个队列，使用LinkedList实现
+	private LinkedList<Object> queue = new LinkedList<Object>();
+
+}

@@ -1,0 +1,30 @@
+/**
+ * 
+ */
+package com.frankstar.WebSpider;
+
+import java.util.ArrayList;
+
+/**
+ * @author frankstar
+ * @ 知乎类
+ */
+public class Zhihu {
+	public String question;
+	public String qLink;
+	public ArrayList<String> answers;
+	
+	//构造方法初始化数据
+	public Zhihu() {
+		question = "";
+		qLink = "";
+		answers = new ArrayList<String>();
+	}
+	
+	public String toString() {
+		return "问题： " + question + "\n链接：" + qLink + "\n回答：" + answers;
+	}
+	
+	
+
+}

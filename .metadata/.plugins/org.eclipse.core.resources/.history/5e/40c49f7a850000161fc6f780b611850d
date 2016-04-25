@@ -1,0 +1,20 @@
+/**
+ * 
+ */
+package com.frankstar.studyThread;
+
+/**
+ * @author frankstar
+ *
+ */
+public class MyThread {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

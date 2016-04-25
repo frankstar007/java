@@ -1,0 +1,32 @@
+/**
+ * 
+ */
+package com.frankstar.WebSpider;
+
+import java.io.BufferedReader;
+import java.net.MalformedURLException;
+import java.net.URL;
+
+/**
+ * @author frankstar
+ * @function 爬虫
+ */
+public class Spider {
+	
+	static String getResults(String url) {
+		String results = "";
+		//定义个缓冲输入流
+		BufferedReader br = null;
+		//定义一个URL对象
+		try {
+			URL realUrl = new URL(url);
+			URLConnection uc = realUrl.openConnection();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return results;
+		
+	}
+
+}

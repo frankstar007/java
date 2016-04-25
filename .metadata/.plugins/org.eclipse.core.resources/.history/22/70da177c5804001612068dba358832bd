@@ -1,0 +1,174 @@
+package com.frankstar.Nlp;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+class Matrix {
+	private final int M;
+	private final int N;
+	private String[][] matrix;
+	public Matrix(int m, int n) {
+		M = m;
+		N = n;
+		//[["年", "会", "足"],["猴", "哈", "球"],["部", "乐", "俱"]]
+		matrix = new String[M][N];
+	}
+	public void setMatrix(String m) {
+		String[] str = m.split(",");
+		int k = 0;
+		for (int i = 0; i < M; i++){
+			for ( int j= 0; j < N; j++){
+					matrix[i][j] = str[k];
+					k++;
+					//System.out.println(matrix[i][j]);
+				}
+		}
+		
+	}
+	
+	public String[][] getMatrix () {
+		return this.matrix;
+//		StringBuilder sb = new StringBuilder("[");
+//		for (int i = 0; i < M; i++){
+//			sb.append("[");
+//			for ( int j = 0; j < N; j++){
+//					sb.append(matrix[i][j].toString() + ", ");
+//				}
+//			int len = sb.length();
+//			sb.delete(len - 2, len);
+//			sb.append("]");
+//		}
+//		//System.out.println(sb);
+//		return sb.append("]").toString();
+	}
+
+	//遍历矩阵中每个字为中心的组合
+	Set<String> wordSet = new HashSet<String>(); 
+	public Set<String> getWords (){
+		
+//		for(int i = 0; i < matrix.length - 1; i++) {
+//			for (int j = 0; j < matrix[i].length; j++) {
+//				System.out.println(matrix[i][j]);
+//				String temp1 = matrix[i][j] + matrix[i+1][j];//年＋猴 ；会＋哈 ；足＋球；猴＋部 。。
+//				//String temp2 = matrix[i][j] + matrix[i][j+1];//
+//				wordSet.add(temp1);
+//				//wordSet.add(temp2);
+//			}
+//		}
+//		for(int k = 0; k < matrix.length; k++){
+//			for(int m = 0; m < matrix[k].length - 1;) {
+//				String temp2 = matrix[k][m] + matrix[k][m+1];
+//				wordSet.add(temp2);
+//				m++;
+//				String temp3 = matrix[k+1][m] + matrix[k+1][m+1];
+//				wordSet.add(temp3);
+//				
+//			}
+//		}
+		//以每个节点形成一个树
+		List list = new ArrayList(); //存储向右或者向下的词
+		List listi = new ArrayList(); //存储向左或者向上的词
+		//1.首先取出2个节点的词(基础)
+		String[][] inputMatrix = this.getMatrix();
+		for(int i = 0; i < inputMatrix.length; i++) {
+			for(int j = 0; j < inputMatrix[i].length; j++) {
+				if (j != 2) {
+					String temp = matrix[i][j] + matrix[i][j+1];
+					list.add(temp);
+				}	
+				if (j != 0) {
+					String tempi = matrix[i][j] + matrix[i][j-1];
+					listi.add(tempi);
+				}
+			}
+		}
+		for(int i = 0; i < inputMatrix.length; i++) {
+			for(int j = 0; j < inputMatrix[i].length; j++) {
+				if (i != 2) {
+					String temp = matrix[i][j] + matrix[i+1][j];
+					list.add(temp);	
+				}
+				if (i != 0) {
+					String tempi = matrix[i-1][j] + matrix[i][j];
+					listi.add(tempi);
+				}
+			}
+		}
+		System.out.println("list :" + list);
+		System.out.println("listi :" + listi);
+		//增加字的个数
+		List thirdOutListi = new ArrayList();
+		List thirdOutList = new ArrayList();
+		List mergeList = new ArrayList();
+		List outMergeList = new ArrayList();
+		//增加第一次 变为3个
+		mergeList.addAll(list);
+		mergeList.addAll(listi);
+		thirdOutList = addWord(list);
+		thirdOutListi = addWord(listi);
+		outMergeList = filterWords(addWord(mergeList));
+		
+//		System.out.println(outList);
+//		System.out.println(outListi);
+//		System.out.println(outMergeList);
+		wordSet = new HashSet(outMergeList);
+		
+		
+		return wordSet;
+		
+	}
+	
+	private List addWord(List list) {
+		List outList = new ArrayList();
+		for ( int i = 0; i < list.size(); i++) {
+			String temp = (String) list.get(i);
+			for (int j = 0; j < list.size(); j++){
+				String temp2 = (String) list.get(j);
+				if ( !(temp.equals(temp2))) {
+					if (temp.substring(1).equals(temp2.substring(0, 1))) {
+						String out = temp+ temp2.substring(1);
+						outList.add(out);
+					}
+				}
+			}
+		}
+		return outList;
+	}
+	//删除首尾字符一致的词
+	private List filterWords(List list){
+		for (int i = 0; i < list.size(); i++) {
+			String temp = (String) list.get(i);
+			String firstStr = temp.substring(0, 1);
+			String lastStr = temp.substring(temp.length() - 1);
+			if (firstStr.equals(lastStr)) {
+				list.remove(i);
+			}
+		}
+		return list;
+	}
+	
+}
+public class MatrixSearch {
+	public String[] solution(String[] dictionary, String[][] matrix){
+		//Please FINISH THIS FUNCTION
+		
+		String[] result = null;
+		
+		return result;
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Matrix matrix = new Matrix(3, 3);
+		String m = new String("年,会,足,猴,哈,球,部,乐,俱");
+		String[][] out = null;
+		matrix.setMatrix(m);
+		out = matrix.getMatrix();
+		System.out.println(out);
+		Set<String> words = new HashSet<String>();
+		words = matrix.getWords();
+		System.out.println(words);
+	}
+
+}

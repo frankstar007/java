@@ -1,0 +1,28 @@
+/**
+ * 
+ */
+package com.frankstar.WebSpider;
+
+/**
+ * @author frankstar
+ * @function 获取知乎的推荐页内容
+ */
+public class ZhihuSpider {
+
+	public static String getZhihu(String url) {
+		//定义返回内容
+		String result;
+		//定义一个缓冲输入流
+		BufferedReader br = null;
+		return result;
+		
+	}
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

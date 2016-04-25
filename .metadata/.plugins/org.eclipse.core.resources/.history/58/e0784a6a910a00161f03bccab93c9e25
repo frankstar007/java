@@ -1,0 +1,25 @@
+/**
+ * 
+ */
+package com.frankstar.javaExam;
+
+/**
+ * @author frankstar
+ * @function 一个生产者对应多个消费者模型
+ * 
+ */
+public class StoreThread {
+	private final int MAX_SIZE;
+	private int count;
+	public StoreThread(int n) {
+		MAX_SIZE = n;
+		count = 0;
+	}
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

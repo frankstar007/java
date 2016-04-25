@@ -1,0 +1,21 @@
+/**
+ * 
+ */
+package com.frankstar.javaExam;
+
+import java.net.DatagramSocket;
+
+/**
+ * @author frankstar
+ * @function udpServer编程
+ */
+public class UdpServerA {
+
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//创建DatagramSocket 指定端口
+		DatagramSocket datagramSocket = new DatagramSocket(9999);
+	}
+
+}

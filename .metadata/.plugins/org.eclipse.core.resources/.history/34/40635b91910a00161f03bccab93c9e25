@@ -1,0 +1,35 @@
+/**
+ * 
+ */
+package com.frankstar.javaExam;
+
+/**
+ * @author frankstar
+ * @function 一个生产者对应多个消费者模型
+ * 
+ */
+public class StoreThread {
+	private final int MAX_SIZE;
+	private int count;
+	public StoreThread(int n) {
+		MAX_SIZE = n;
+		count = 0;
+	}
+	//往仓库里添加货物
+	public synchronized void add() {
+		while (count > MAX_SIZE) {
+			System.out.println("已经满了！");
+			try {
+				this.wait();
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

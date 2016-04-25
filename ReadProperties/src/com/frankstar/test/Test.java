@@ -19,10 +19,10 @@ public class Test {
 		
 		String c = new String("foo");
 		String d = new String("foo");
-		String e = c;
+		String e = a;
 		System.out.println(a == b);
 		System.out.println(c == d);
-		System.out.println(e == c);
+		System.out.println(e == a);
 
 	}
 

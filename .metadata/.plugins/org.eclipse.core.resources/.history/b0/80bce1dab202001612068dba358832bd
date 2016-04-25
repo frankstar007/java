@@ -1,0 +1,12 @@
+package com.frankstar;
+
+import java.util.Date;
+
+public class SuperTest extends Date{
+	private static final serialVersionUID = 1L;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

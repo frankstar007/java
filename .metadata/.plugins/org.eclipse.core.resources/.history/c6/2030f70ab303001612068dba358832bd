@@ -1,0 +1,38 @@
+/**
+ * 
+ */
+package com.frankstar.Nlp;
+
+/**
+ * @author frankstar
+ *
+ */
+public class MatrixDemo<T> {
+	
+	public Node node;
+	
+	class Node {
+		public T data;
+		public Node left;
+		public Node right;
+		public Node up;
+		public Node down;
+		
+		public Node(){}
+		
+		public Node(T data, Node l, Node r, Node u, Node d){
+			this.data = data;
+			this.down = d;
+			this.left = l;
+			this.up = u;
+			this.right = r;
+			
+		}
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

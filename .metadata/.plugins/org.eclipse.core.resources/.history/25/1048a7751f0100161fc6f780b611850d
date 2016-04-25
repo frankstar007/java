@@ -1,0 +1,19 @@
+/**
+ * 
+ */
+package com.frankstar;
+
+/**
+ * @author frankstar
+ * @function下载网页的工具类
+ */
+public class DownTool {
+	//根据URL和网页类型生成需要保存的网页的文件名，去除URL中的非文件名字符
+	private String getFileNameByUrl(String url, String contentType) {
+		//移除http://字符
+		url = url.substring(7);
+		
+		
+		return url;
+	}
+}

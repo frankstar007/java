@@ -1,0 +1,13 @@
+/**
+ * 
+ */
+package com.frankstar;
+
+/**
+ * @author frankstar
+ * @function 自定义保存类 保存visited表和Unvisited表
+ */
+public class SpiderQueue {
+	//已访问的url集合 Visited表
+	private static Set<Object> visitedUrl = new Set<Object>();
+}

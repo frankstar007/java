@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package com.frankstar.javaExam;
+
+/**
+ * @author frankstar
+ * @function 用tcp通信模型创建一个web 服务器
+ */
+public class WebServer {
+
+}

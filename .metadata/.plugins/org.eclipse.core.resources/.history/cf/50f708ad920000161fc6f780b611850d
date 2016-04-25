@@ -1,0 +1,38 @@
+/**
+ * 
+ */
+package com.frankstar.WebSpider;
+
+import java.io.BufferedReader;
+import java.net.URL;
+import java.net.URLConnection;
+
+/**
+ * @author frankstar
+ * @function 获取知乎的推荐页内容
+ */
+public class ZhihuSpider {
+
+	public static String getZhihu(String url) {
+		//定义返回内容
+		String result;
+		//定义一个缓冲输入流
+		BufferedReader br = null;
+		try {
+			//将url转换为一个URL对象
+			URL realUrl = new URL(url);
+			//初始化一个URL链接
+			URLConnection uc = realUrl.openConnection();
+		}
+		return result;
+		
+	}
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

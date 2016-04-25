@@ -1,0 +1,28 @@
+/**
+ * 
+ */
+package com.frankstar.WebSpider;
+
+import java.io.BufferedReader;
+
+/**
+ * @author frankstar
+ *
+ */
+public class MainSpider {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//定义即将访问的连接
+		String url = "http://www.baidu.com";
+		//定义一个字符串来存储网页内容
+		String result = "";
+		//定义一个缓冲字符输出流
+		BufferedReader in = null;
+
+	}
+
+}

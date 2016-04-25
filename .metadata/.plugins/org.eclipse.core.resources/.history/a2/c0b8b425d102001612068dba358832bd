@@ -1,0 +1,140 @@
+/**
+ * 
+ */
+package com.frankstar;
+
+/**
+ * @author frankstar
+ * 构造二叉树 二叉树的链式存储
+ */
+public class BinaryTree {
+	//private TreeNode root = null;
+	private Node root;
+	private class Node {
+		Node left;
+		Node right;
+		int data;
+		
+		Node(int newData) {
+			left = null;
+			right = null;
+			data = newData;
+		}
+	}
+	
+	public boolean lookUp(int data) {
+		return (lookUp(root, data));
+	}
+	
+	public boolean lookUp(Node node, int data) {
+		if (node == null)
+			return false;
+		if (data == node.data) {
+			return true;
+		} else if (data < node.data) {
+			return lookUp(node.left, data);
+		} else {
+			return lookUp(node.right, data);
+		}
+	}
+	
+	public void insert (int data) {
+		root = insert(root, data);
+	}
+
+	private Node insert(Node node, int data) {
+		if (node == null) {
+			return new Node(data);
+		} else {
+			if (data <= node.data) {
+				node.left = insert(node.left, data);
+			} else {
+				node.right = insert(node.right, data);
+			}
+		}
+		return node;
+	}
+	
+	public void printInOrder() {
+		printInOrder(root);
+		System.out.println();
+	}
+
+	private void printInOrder(Node root) {
+		if (root == null) {
+			return;
+		}
+		printInOrder(root.left);
+		System.out.println(root.data + " ");
+		printInOrder(root.right);
+	}
+	
+	public void printPreOrder() {
+		printPreOrder(root);
+		System.out.println();
+	}
+
+	private void printPreOrder(Node node) {
+		if (node == null) {
+			return;
+		}
+		System.out.println(node.data + " ");;
+		printInOrder(node.left);
+		printPreOrder(node.right);
+		
+	}
+	
+	public void printPostOrder() {
+		printPostOrder(root);
+		System.out.println();
+	}
+
+	private void printPostOrder(Node node) {
+		if (node == null) {
+			return;
+		}
+		printPostOrder(node.left);
+		printPostOrder(node.right);
+		System.out.println(node.data + " ");
+		
+	}
+	
+	public void buildTree1() {
+		root = new Node(3);
+		Node lchild = new Node(1);
+		Node rchild = new Node(3);
+		root.left = lchild;
+		root.right = rchild;
+	}
+	
+	public void buildTree2() {
+		root = new Node(2);
+		root.left = new Node(1);
+		root.right = new Node(3);
+	}
+	
+	public void bulidTree3() {
+		root = null;
+		root = insert(root,2);
+		root = insert(root, 1);  
+        root = insert(root, 3);  
+        root = insert(root, 5);  
+        root = insert(root, 11);  
+        root = insert(root, 4);  
+        root = insert(root, 23);  
+        root = insert(root, 11);  
+        root = insert(root, 22);
+	}
+	
+	public int size() {
+		return size(root);
+	}
+
+	private int size(Node root) {
+		if (root == null) {
+			return 0;
+		} else {
+			return (size(root.left) + size(root.right));
+		}
+	}
+}

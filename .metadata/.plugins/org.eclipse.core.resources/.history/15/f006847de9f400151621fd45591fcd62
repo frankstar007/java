@@ -1,4 +1,0 @@
-driver = com.frankstar.sqlserver.jdbc
-url = jdbc:sqlserver://127.0.0.1:1433
-username = frankstar
-password = njuim

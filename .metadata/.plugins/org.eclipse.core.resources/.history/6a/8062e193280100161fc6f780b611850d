@@ -1,0 +1,34 @@
+/**
+ * 
+ */
+package com.frankstar;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import org.htmlparser.NodeFilter;
+import org.htmlparser.Parser;
+import org.htmlparser.filters.LinkRegexFilter;
+import org.htmlparser.filters.NodeClassFilter;
+
+/**
+ * @author frankstar
+ * @function html 解析工具
+ */
+public class HtmlParserTool {
+	//获取网页上的所有链接filter用来过滤
+	public static Set<String> extracLinks(String url, LinkRegexFilter filter) {
+		Set<String> links = new HashSet<String>();
+		
+		try {
+			Parser parser = new Parser(url);
+			parser.setEncoding("gb2312");
+			//过滤<frame>标签的filter，用来提取frame标签中src
+			NodeFilter frameFilter = new NodeFilter();
+		}
+		
+		return links;
+		
+	}
+	
+}

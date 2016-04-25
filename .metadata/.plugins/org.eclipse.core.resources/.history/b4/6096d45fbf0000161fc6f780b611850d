@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package com.frankstar.WebSpider;
+
+/**
+ * @author frankstar
+ * @function 读写文件
+ */
+public class FileReaderWriter {
+
+}

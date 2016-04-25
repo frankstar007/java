@@ -1,0 +1,11 @@
+package com.frankstar.javaExam;
+
+import java.net.Socket;
+
+public class MyThread extends Thread{
+	private Socket socket;
+	
+	public MyThread(Socket socket) {
+		this.socket = socket;
+	}
+}

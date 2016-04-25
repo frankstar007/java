@@ -1,0 +1,26 @@
+/**
+ * 
+ */
+package com.frankstar;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import javax.swing.text.html.parser.Parser;
+
+/**
+ * @author frankstar
+ * @function html 解析工具
+ */
+public class HtmlParserTool {
+	//获取网页上的所有链接filter用来过滤
+	public static Set<String> extracLinks(String url) {
+		Set<String> links = new HashSet<String>();
+		
+		try {
+			Parser parser = new Parser(url);
+		}
+		
+	}
+	
+}

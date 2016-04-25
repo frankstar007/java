@@ -1,0 +1,21 @@
+/**
+ * 
+ */
+package com.frankstar.javaExam;
+
+import java.net.ServerSocket;
+
+/**
+ * @author frankstar
+ *	@function 用多线程实现tcpserver编程
+ */
+public class TcpServerB {
+
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//端口号创建一个serversocket对象
+		ServerSocket serverSocket = new ServerSocket(8888);
+	}
+
+}

@@ -1,0 +1,25 @@
+/**
+ * 
+ */
+package com.frankstar;
+
+/**
+ * @author frankstar
+ * @function 测是类的加载过程
+ */
+public class StaticTest {
+
+	
+	public static void main(String[] args) {
+		staticFunction();
+	}
+	static StaticTest st = new StaticTest();
+	static {
+		System.out.println("1");
+	}
+	public static void staticFunction() {
+		System.out.println("4");
+		
+	}
+
+}

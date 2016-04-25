@@ -1,0 +1,21 @@
+/**
+ * 
+ */
+package com.frankstar.WebSpider;
+
+/**
+ * @author frankstar
+ * @function Main方法调用
+ *
+ */
+public class Main {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

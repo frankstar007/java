@@ -1,0 +1,39 @@
+package com.frankstar;
+
+//链式队列
+public class LinkQueue<T> {
+	//链的数据接口
+	private class Node {
+		public T data;
+		public Node next;
+		
+		public Node(){}
+		
+		public Node(T data, Node node) {
+			this.data = data;
+			this.next = node;
+		}	
+	}
+	//头指针
+	private Node front;
+	//尾指针
+	private Node rear;
+	public LinkQueue() {
+		Node node = new Node(null, null);
+		node.next = null;
+		front = rear = node;
+	}
+	//队列入栈
+	public void enQueue (T data) {
+		//创建一个节点
+		Node temp = new Node(data, null);
+		rear.next = temp;
+		rear = temp;
+		size++;
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
