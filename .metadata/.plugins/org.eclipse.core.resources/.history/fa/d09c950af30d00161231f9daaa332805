@@ -1,0 +1,36 @@
+package com.frankstar.Spring;
+
+import java.net.URL;
+
+import org.jdom.Document;
+import org.jdom.Element;
+import org.jdom.input.SAXBuilder;
+
+
+
+public class Bean {
+	private String id;
+	private String className;
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	public String getClassName() {
+		return className;
+	}
+	public void setClassName(String className) {
+		this.className = className;
+	}
+	
+	public void readXML(String fileName) {
+		//寻找配置文件
+		URL xmlPath = this.getClass().getClassLoader().getResource(fileName);
+		Document document = null;
+		Element element = null;
+		try {
+			SAXBuilder sBuilder = new SAXBuilder(false);
+		}
+	}
+}

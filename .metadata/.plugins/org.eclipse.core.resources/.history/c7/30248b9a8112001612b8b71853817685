@@ -1,0 +1,31 @@
+/**
+ * 
+ */
+package com.frankstar.study.servlet2;
+
+import java.io.IOException;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.jsp.JspException;
+import javax.servlet.jsp.PageContext;
+import javax.servlet.jsp.tagext.SimpleTagSupport;
+
+/**
+ * @author frankstar
+ *
+ */
+public class RefererTag extends SimpleTagSupport{
+	private String site;
+	private String page;
+	public void setSite(String site) {
+		this.site = site;
+	}
+	public void setPage(String page) {
+		this.page = page;
+	}
+	public void doTag() throws JspException, IOException {
+		PageContext pageContext = (PageContext) this.getJspContext();
+		HttpServletRequest request = (HttpServletRequest) pageContext.getRequest();
+		String referer = request.getHeader("referer")
+	}
+}

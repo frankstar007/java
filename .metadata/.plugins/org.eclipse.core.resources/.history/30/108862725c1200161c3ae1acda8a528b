@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package com.frankstar.study.servlet2;
+
+/**
+ * @author frankstar
+ * 该类继承TagSupport类 并重写doStartTag方法
+ */
+public class TagDemo1 {
+
+}

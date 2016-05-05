@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package com.frankstar.javaStudy1;
+
+/**
+ * @author frankstar
+ * 单例的继承
+ */
+public class BaseSingleton {
+
+}

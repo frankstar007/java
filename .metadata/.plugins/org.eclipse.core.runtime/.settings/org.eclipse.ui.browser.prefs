@@ -1,6 +1,7 @@
+=\=\=\=\=\=\=
+<<<<<<<=HEAD
+>>>>>>>=develop
+browser-choice=1
 browsers=<?xml version\="1.0" encoding\="UTF-8"?>\n<web-browsers current\="0">\n<system/>\n</web-browsers>
 eclipse.preferences.version=1
-<<<<<<< HEAD
-internalWebBrowserHistory=http\://localhost\:8080/MyBatis_Study/WEB-INF/classes/com/frankstar/mybatis/test/Demo1.java|*|
-=======
->>>>>>> develop
+internalWebBrowserHistory=http\://localhost\:8080/Servlet_Study/ServletDemo1|*|http\://localhost\:8080/MyBatis_Study/WEB-INF/classes/com/frankstar/mybatis/test/Demo1.java|*|

@@ -1,0 +1,21 @@
+package com.frankstar.Spring;
+
+public class Property {
+	private String name;
+	private String ref;
+	
+	public Property(String name, String ref) {
+		super();
+		this.name = name;
+		this.setRef(ref);
+	}
+
+	public String getRef() {
+		return ref;
+	}
+
+	public void setRef(String ref) {
+		this.ref = ref;
+	}
+
+}

@@ -1,0 +1,18 @@
+package com.frankstar.springStudy.DI;
+
+import javax.management.RuntimeErrorException;
+
+public class DefaultBeanFactory {
+	// Bean定义注册表
+	private BeanDifinitionRegister DEFINITIONS = new BeanDifinitionRegister();
+	//单例注册表
+	private final SingletonBeanRegister SINGLETONS = new SingletonBeanRegister();
+	public Object getBean(String beanName) {
+		//验证Bean定义是否存在
+		if(DEFINITIONS.containsBeanDefinition(beanName)) {
+			throw new RuntimeErrorException("不存在［" + beanName + "]Bean定义");
+		}
+		
+	}
+
+}

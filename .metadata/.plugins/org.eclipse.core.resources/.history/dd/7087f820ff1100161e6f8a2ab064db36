@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package com.frankstar.study.servlet2;
+
+/**
+ * @author frankstar
+ * 实现Tag接口
+ */
+public class ViewIPTag {
+
+}

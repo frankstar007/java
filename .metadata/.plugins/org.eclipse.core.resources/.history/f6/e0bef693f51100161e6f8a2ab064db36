@@ -1,0 +1,14 @@
+/**
+ * 
+ */
+package me.frankstar.service.impl;
+
+import me.frankstar.service.IUserService;
+
+/**
+ * @author frankstar
+ *
+ */
+public class UserServiceImpl implements IUserService{
+
+}

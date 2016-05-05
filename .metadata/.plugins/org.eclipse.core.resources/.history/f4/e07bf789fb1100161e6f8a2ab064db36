@@ -1,0 +1,59 @@
+/**
+ * 
+ */
+package me.frankstar.web.formbean;
+
+import java.util.HashMap;
+import java.util.Map;
+
+/**
+ * @author frankstar
+ * 封装用户注册表单bean 用来接受register.jsp中表单输入项的值
+ */
+public class RegisterFormBean {
+	private String userName;
+	private String userPwd;
+	private String confirmPwd;
+	private String email;
+	private String birthday;
+	
+	private Map<String, String> errors = new HashMap<String, String>();
+	public Map<String, String> getErrors() {
+		return errors;
+	}
+	public void setErrors(Map<String, String> errors) {
+		this.errors = errors;
+	}
+	
+	public boolean validate() {
+		boolean isOk = true;
+		
+		if (this.userName == null || this.userName.trim().equals("")) {
+			isOk = false;
+			errors.put("userName", "用户名不能为空！");
+		} else {
+			if (!this.userName.matches("[a-zA-Z]{3,8}")) {
+				isOk = false;
+				errors.put("userName", "用户名必须师3-8位的字母！");
+			}
+		}
+		
+		if (this.userPwd == null || this.userPwd.trim().equals("")) {
+			isOk = false;
+			errors.put("userPwd", "密码不能为空！");
+		} else {
+			if (!this.userPwd.matches("\\d{3,8}")) {
+				isOk = false;
+				errors.put("userPwd", "密码必须师3-8位的数字！");
+			}
+		}
+		if (this.confirmPwd != null) {
+			if (!this.confirmPwd.equals(this.userPwd)) {
+				isOk = false;
+				errors.put("confirmPwd", "两次密码不一致！")
+			}
+		}
+		return isOk;
+	}
+
+}

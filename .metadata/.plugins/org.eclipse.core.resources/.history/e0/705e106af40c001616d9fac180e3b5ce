@@ -1,0 +1,5 @@
+package com.frankstar.springStudy.DI;
+
+public class DependentBean {
+
+}

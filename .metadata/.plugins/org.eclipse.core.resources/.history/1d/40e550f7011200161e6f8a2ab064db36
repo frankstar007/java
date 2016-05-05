@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package com.frankstar.javaStudy1;
+
+/**
+ * @author frankstar
+ *
+ */
+public class SingleInstance {
+
+}

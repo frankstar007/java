@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package com.frankstar.study.servlet2;
+
+/**
+ * @author frankstar
+ * SimpleTag接口提供一个默认的实现类SimpleTagSupport
+ */
+public class SimpleTagDemo1 {
+
+}

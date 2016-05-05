@@ -1,0 +1,14 @@
+package com.frankstar.servlet.study;
+
+public class Book {
+	private String id;
+	private String name;
+	
+	public Book() {
+		super();
+	}
+	public Book(String id, String name) {
+		this.id = id;
+		this.name = nama;
+	}
+}

@@ -1,0 +1,7 @@
+package com.frankstar.springStudy.DI;
+
+import java.io.FileOutputStream;
+
+public class ResourceBean {
+	private FileOutputStream foStream;
+}

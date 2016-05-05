@@ -1,0 +1,14 @@
+/**
+ * 
+ */
+package me.frankstar.dao;
+
+import me.frankstar.domain.User;
+
+/**
+ * @author frankstar
+ * @数据访问接口
+ */
+public interface IUserDao {
+	User find(String userName, String userPwd);
+}

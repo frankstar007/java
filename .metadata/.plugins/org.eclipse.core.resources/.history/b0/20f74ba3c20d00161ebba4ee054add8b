@@ -1,0 +1,9 @@
+package com.frankstar.springStudy.DI;
+
+public class DefaultBeanFactory {
+	// Bean定义注册表
+	private BeanDifinitionRegister DEFINITIONS = new BeanDifinitionRegister();
+	//单例注册表
+	private final SingletonBeanRegister SINGLETONS = new SingletonBeanRegister();
+
+}

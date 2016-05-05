@@ -1,0 +1,15 @@
+/**
+ * 
+ */
+package com.frankstar.study.servlet2;
+
+import javax.servlet.jsp.tagext.SimpleTagSupport;
+
+/**
+ * @author frankstar
+ *
+ */
+public class IFTag extends SimpleTagSupport {
+	private boolean test;
+
+}

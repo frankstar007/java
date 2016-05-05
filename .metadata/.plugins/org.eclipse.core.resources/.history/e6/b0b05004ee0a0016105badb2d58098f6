@@ -1,9 +1,0 @@
-package com.frankstar.mybatis.model;
-
-public class Article {
-	private int id;
-	private User user;
-	private String title;
-	private String content;
-
-}

@@ -1,0 +1,12 @@
+1462283423450	Copy package
+1462283436210	Delete element
+1462284401225	Encapsulate field 'id'
+1462284409814	Encapsulate field 'userName'
+1462284414342	Encapsulate field 'userPwd'
+1462284424022	Encapsulate field 'email'
+1462284430030	Encapsulate field 'birthday'
+1462368828939	Encapsulate field 'userName'
+1462368833009	Encapsulate field 'userPwd'
+1462368836439	Encapsulate field 'confirmPwd'
+1462368842958	Encapsulate field 'email'
+1462368848124	Encapsulate field 'birthday'

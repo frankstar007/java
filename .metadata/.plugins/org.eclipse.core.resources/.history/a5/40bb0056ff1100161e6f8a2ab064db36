@@ -1,0 +1,55 @@
+/**
+ * 
+ */
+package com.frankstar.study.servlet2;
+
+import javax.servlet.jsp.JspException;
+import javax.servlet.jsp.PageContext;
+import javax.servlet.jsp.tagext.Tag;
+
+/**
+ * @author frankstar
+ * 实现Tag接口
+ */
+public class ViewIPTag implements Tag{
+	
+	//接受传递进来的PageContext对象
+	private PageContext PageContext;
+	
+	@Override
+	public int doEndTag() throws JspException {
+		System.out.println("调用doEndTag()方法");
+		return 0;
+	}
+
+	@Override
+	public int doStartTag() throws JspException {
+		System.out.println("调用doStartTag()方法");
+		return 0;
+	}
+
+	@Override
+	public Tag getParent() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void release() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setPageContext(PageContext arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setParent(Tag arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

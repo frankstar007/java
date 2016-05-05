@@ -1,0 +1,9 @@
+package com.frankstar.springStudy.DI;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class BeanDifinitionRegister {
+	//bean定义缓存，此处不考虑并发
+	 private final Map<String, BeanDefinition> DEFINITIONS = new HashMap<String, BeanDefinition>();
+}

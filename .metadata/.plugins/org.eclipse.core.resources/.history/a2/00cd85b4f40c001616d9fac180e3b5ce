@@ -1,0 +1,16 @@
+package com.frankstar.springStudy.DI;
+
+import java.io.IOException;
+
+public class DependentBean {
+	ResourceBean resourceBean;
+	public void write(String ss) throws IOException {
+		System.out.println("写资源");
+		resourceBean.getFoStream().write(ss.getBytes());
+	}
+	//初始化方法
+	public void init() {
+		System.out.println("DependentBean:====初始化");
+		resourceBean.getFoStream().write("DependentBean:====初始化");
+	}
+}

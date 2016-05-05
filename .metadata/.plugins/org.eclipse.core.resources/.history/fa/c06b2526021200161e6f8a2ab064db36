@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package com.frankstar.javaStudy1;
+
+/**
+ * @author frankstar
+ * 懒汉式单例模式
+ */
+public class SingleInstance {
+	private static SingleInstance sInstance = new SingleInstance();
+}

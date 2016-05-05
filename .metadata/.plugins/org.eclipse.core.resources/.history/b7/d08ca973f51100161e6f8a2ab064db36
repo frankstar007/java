@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package me.frankstar.exception;
+
+/**
+ * @author frankstar
+ *
+ */
+public class UserExistException extends Exception {
+	//用户存在
+}

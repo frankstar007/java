@@ -1,0 +1,18 @@
+/**
+ * 
+ */
+package com.frankstar.javaStudy1;
+
+/**
+ * @author frankstar
+ *利用静态内部类
+ */
+public class SingleInstanceStatic {
+	private SingleInstanceStatic(){
+		
+	}
+	
+	private static SingleInstanceStatic getInstance() {
+		return SingleInstanceHolder.sInstance;
+	}
+}

@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package com.frankstar.study.servlet2;
+
+/**
+ * @author frankstar
+ * 重写doTag方法 重复调用jspFrament.invoke方法即可
+ */
+public class SimpleTagDemo2 {
+
+}

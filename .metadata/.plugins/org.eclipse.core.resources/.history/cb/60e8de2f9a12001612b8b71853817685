@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package com.frankstar.study.servlet2;
+
+/**
+ * @author frankstar
+ * otherwise标签
+ */
+public class OtherWiseTag {
+
+}

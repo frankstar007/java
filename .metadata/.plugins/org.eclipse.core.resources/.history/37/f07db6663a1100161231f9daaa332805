@@ -1,0 +1,46 @@
+/**
+ * 
+ */
+package me.frankstar.dao.impl;
+
+import org.dom4j.Document;
+import org.dom4j.Element;
+
+import me.frankstar.dao.IUserDao;
+import me.frankstar.domain.User;
+import me.frankstar.util.XMLUtils;
+
+/**
+ * @author frankstar
+ * 具体实现数据访问接口中的定义
+ */
+public class UserDaoImpl implements IUserDao{
+
+	@Override
+	public User find(String userName, String userPwd) {
+		try {
+			Document document = XMLUtils.getOwnerDocument();
+			//使用XPath表达式来操作XML节点
+			Element element = (Element) document.selectSingleNode("//user[@userName='"+userName+"' and @userPwd='"+userPwd+"']");
+			if (element == null) {
+				return null;
+			}
+			
+			User user = new User();
+		}
+		return null;
+	}
+
+	@Override
+	public void add(User user) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public User find(String userName) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

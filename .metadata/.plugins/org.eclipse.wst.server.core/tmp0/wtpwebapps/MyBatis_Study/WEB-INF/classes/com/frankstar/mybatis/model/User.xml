@@ -6,4 +6,36 @@
     <select id="selectUserByID" parameterType="int" resultType="User">
         select * from `user` where id = #{id}
     </select>
+    <resultMap type="User" id="resultListUser">
+    	<id column="id" property="id"></id>
+    	<result column="userName" property="userName"></result>
+    	<result column="userAge" property="userAge"></result>
+    	<result column="userAddress" property="userAddress"></result>
+    </resultMap>
+    <resultMap type="Article" id="resultUserArticleList">
+    	<id property="id" column="aid"></id>
+    	<result property="title" column="title"/>
+    	<result property="content" column="content"/>
+    	<association property="user" javaType="User" resultMap="resultListUser"/>
+    </resultMap>
+    <select id="getUserArticles" parameterType="int" resultMap="resultUserArticleList">
+    	select user.id,user.userName,user.userAge,user.userAddress,article.id
+    		aid,article.title,article.content from user,article
+    		where user.id=article.userid and user.id=#{id}
+    </select>
+    <select id="selectUsers" parameterType="string" resultMap="resultListUser">
+    	select * from user where userName like #{userName}
+    </select>
+    <insert id="addUser" parameterType="User" useGeneratedKeys="true" keyProperty="id">
+    	insert into user(userName,userAge,userAddress)
+    		values(#{userName},#{userAge},#{userAddress})
+    </insert>
+    <update id="updateUser" parameterType="User">
+    	update user set userName=#{userName},userAge=#{userAge},userAddress=#{userAddress}
+    		where id=#{id}
+    </update>
+    <delete id="deleteUser" parameterType="int">
+    	delete from user where id=#{id}
+    </delete>
 </mapper>
+

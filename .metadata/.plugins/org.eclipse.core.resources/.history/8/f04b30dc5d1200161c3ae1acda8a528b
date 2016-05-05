@@ -1,0 +1,14 @@
+/**
+ * 
+ */
+package com.frankstar.study.servlet2;
+
+import javax.servlet.jsp.tagext.TagSupport;
+
+/**
+ * @author frankstar
+ * 继承TagSupport重写
+ */
+public class TagDemo2 extends TagSupport{
+	public int doEndTag()
+}

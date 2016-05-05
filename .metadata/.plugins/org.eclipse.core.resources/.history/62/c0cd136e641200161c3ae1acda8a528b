@@ -1,0 +1,13 @@
+/**
+ * 
+ */
+package com.frankstar.study.servlet2;
+
+/**
+ * @author frankstar
+ * SimpleTag接口提供一个默认的实现类SimpleTagSupport,该类实现了接口中的所有方法
+ * 因此我们可以继承该类，根据需要重写doTag()方法
+ */
+public class SimpleTagDemo1 {
+
+}

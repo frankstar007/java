@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package me.frankstar.web.formbean;
+
+/**
+ * @author frankstar
+ *
+ */
+public class RegisterFormBean {
+
+}

@@ -1,0 +1,12 @@
+package com.frankstar.springStudy.DI;
+
+public class BeanDefinition {
+	//单例
+	public static final int SCOPE_SINGLETON = 0;
+	//原型
+	public static final int SCOPE_PROTOTYPE = 1;
+	//唯一标识
+	private String id;
+	private String clazz;
+	private int scope = SCOPE_SINGLETON;
+}

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+    <beans xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+ 
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+<bean id="listBean" class="com.frankstar.springStudy.ListTestBean">
+	<property name="values">
+		<list>
+			<value>1</value>
+			<value>2</value>
+			<value>3</value>
+			<value>4</value>
+		</list>
+	</property>
+</bean>
+<bean id="setBean" class="com.frankstar.springStudy.CollectionTestBean">
+	<property name="values">
+		<list>
+			<value>5</value>
+			<value>6</value>
+			<value>7</value>
+			<value>8</value>
+		</list>
+	</property>
+
+</bean>
+<bean id="arrBean" class="com.frankstar.springStudy.ArrayTest">
+	<property name="arr">
+		<array>
+			<value>5</value>
+			<value>6</value>
+			<value>7</value>
+			<value>8</value>
+		</array>
+	</property>
+
+</bean>
+</beans>

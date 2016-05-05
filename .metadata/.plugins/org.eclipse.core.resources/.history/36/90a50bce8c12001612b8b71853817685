@@ -1,0 +1,18 @@
+/**
+ * 
+ */
+package com.frankstar.study.servlet2;
+
+import javax.servlet.jsp.tagext.SimpleTagSupport;
+import javax.sound.midi.VoiceStatus;
+
+/**
+ * @author frankstar
+ *
+ */
+public class WhenTag extends SimpleTagSupport {
+	private boolean test;
+	public void setTest(boolean test) {
+		this.test = test;
+	}
+}

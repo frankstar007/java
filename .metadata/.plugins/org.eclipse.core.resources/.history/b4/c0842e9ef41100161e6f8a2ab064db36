@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package me.frankstar.service;
+
+/**
+ * @author frankstar
+ *
+ */
+public interface IUserService {
+
+}
