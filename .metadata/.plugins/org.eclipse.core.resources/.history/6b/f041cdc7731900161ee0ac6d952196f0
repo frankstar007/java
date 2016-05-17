@@ -1,0 +1,15 @@
+package com.frankstar.javaStudy1;
+
+public class ReflectTest {
+	public static Car initByDefaultConst() throws Throwable {
+		//通过类加载器获得Car类对象
+		ClassLoader loader = Thread.currentThread().getContextClassLoader();
+		Class clazz = loader.loadClass("com.frankstar.javaStudy1.Car");
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

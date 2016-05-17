@@ -1,8 +1,0 @@
-package com.frankstar.servlet.study;
-
-import java.util.LinkedHashMap;
-import java.util.Map;
-
-public class DB {
-	private static Map<String, Book> map = new LinkedHashMap<>();
-}

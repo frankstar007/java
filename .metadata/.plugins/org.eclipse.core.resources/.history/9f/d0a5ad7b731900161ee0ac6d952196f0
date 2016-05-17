@@ -1,0 +1,13 @@
+package com.frankstar.javaStudy1;
+
+public class ReflectTest {
+	public static Car initByDefaultConst() throws Throwable {
+		//通过类加载器获得Car类对象
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

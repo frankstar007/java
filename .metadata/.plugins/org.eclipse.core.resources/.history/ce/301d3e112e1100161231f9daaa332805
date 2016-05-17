@@ -1,7 +1,0 @@
-package com.frankstar.study.servlet1;
-
-public class CalculatorBean {
-	private double firstNum;
-	private double secondNum;
-	private char operator = '+';
-}

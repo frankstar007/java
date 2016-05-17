@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package loginAction;
+
+/**
+ * @author frankstar
+ * 处理视图业务落，一般一个视图对应一个业务逻辑控制器
+ */
+public class LoginAction {
+
+}

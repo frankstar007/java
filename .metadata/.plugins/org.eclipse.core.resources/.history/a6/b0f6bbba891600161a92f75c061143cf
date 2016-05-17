@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package com.frankstar.study.servlet4;
+
+/**
+ * @author frankstar
+ *
+ */
+public class Person {
+
+}

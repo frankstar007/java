@@ -1,0 +1,13 @@
+/**
+ * 
+ */
+package com.frankstar.study.servlet4;
+
+/**
+ * @author frankstar
+ * 设计一个可以被别的对象监听的对象
+ * Person类作为事件源 这个类的对象的行为可以被其他对象监听到
+ */
+public class Person {
+
+}

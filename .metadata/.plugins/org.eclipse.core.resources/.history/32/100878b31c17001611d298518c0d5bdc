@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+ 
+<struts>
+    <include file="example.xml"/>
+    <!-- 所有的Action配置都应该放在元素package下，name定义包名，extends属性定义继承的包空间struts-default -->
+</struts>

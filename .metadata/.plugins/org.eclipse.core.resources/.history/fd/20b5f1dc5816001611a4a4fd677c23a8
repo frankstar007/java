@@ -1,0 +1,14 @@
+/**
+ * 
+ */
+package com.frankstar.study.servlet4;
+
+import javax.servlet.Filter;
+
+/**
+ * @author frankstar
+ * 用来解决get post请求方式下的中文乱码问题
+ */
+public class CharacterEncodingFilter implements Filter{
+
+}

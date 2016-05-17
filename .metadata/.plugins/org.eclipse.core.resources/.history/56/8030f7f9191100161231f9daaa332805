@@ -1,9 +1,0 @@
-package com.frankstar.study.servlet1;
-
-public class Person {
-	//javaBean必须要有一个无参的构造函数 属性必须私有化 私有化属性必须通过public方法暴露给其他程序
-	private String name;
-	private String sex;
-	private int age;
-	private boolean married;
-}

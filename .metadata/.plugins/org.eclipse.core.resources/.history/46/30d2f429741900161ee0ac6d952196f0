@@ -1,0 +1,22 @@
+package com.frankstar.javaStudy1;
+
+import java.lang.reflect.Constructor;
+
+public class ReflectTest {
+	public static Car initByDefaultConst() throws Throwable {
+		//通过类加载器获得Car类对象
+		ClassLoader loader = Thread.currentThread().getContextClassLoader();
+		Class clazz = loader.loadClass("com.frankstar.javaStudy1.Car");
+		
+		//获取类的默认构造器对象并通过它实例化Car
+		Constructor constructor = clazz.getDeclaredConstructor((Class[])null);
+		Car car = constructor.newInstance();
+		
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

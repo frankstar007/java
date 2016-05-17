@@ -1,0 +1,7 @@
+package com.frankstar.study.servlet4;
+
+import javax.servlet.Filter;
+
+public class FilterDemo2 implements Filter{
+
+}

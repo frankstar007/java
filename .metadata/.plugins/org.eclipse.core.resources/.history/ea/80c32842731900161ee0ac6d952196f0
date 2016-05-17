@@ -1,0 +1,11 @@
+package com.frankstar.javaStudy1;
+
+public class ReflectTest {
+	public static Car initByDefaultConst()
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

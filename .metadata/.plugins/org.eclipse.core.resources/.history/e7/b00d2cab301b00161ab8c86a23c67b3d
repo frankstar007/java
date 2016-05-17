@@ -1,0 +1,7 @@
+package me.frankstar.JSPstudy1;
+
+import javax.servlet.jsp.tagext.SimpleTagSupport;
+
+public class HelloWorld extends SimpleTagSupport{
+
+}

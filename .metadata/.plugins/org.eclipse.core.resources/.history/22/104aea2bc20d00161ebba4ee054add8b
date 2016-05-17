@@ -1,5 +1,0 @@
-package com.frankstar.springStudy.DI;
-
-public class DefaultBeanFactory {
-
-}

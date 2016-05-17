@@ -1,0 +1,10 @@
+package me.frankstar.JSPstudy1;
+
+public class QueryTag {
+	//标签的属性
+	private String driver;
+	private String url;
+	private String user;
+	private String pass;
+	private String sql;
+}

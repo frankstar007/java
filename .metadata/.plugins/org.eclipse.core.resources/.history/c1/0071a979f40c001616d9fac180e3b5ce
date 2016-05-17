@@ -1,8 +1,0 @@
-package com.frankstar.springStudy.DI;
-
-public class DependentBean {
-	ResourceBean resourceBean;
-	public void write(String ss) {
-		System.out.println("写资源");
-	}
-}

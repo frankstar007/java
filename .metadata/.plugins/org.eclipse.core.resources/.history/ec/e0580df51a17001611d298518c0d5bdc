@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package loginBean;
+
+/**
+ * @author frankstar
+ * 业务逻辑组件LoginBean类
+ */
+public class LoginBean {
+
+}

@@ -13,15 +13,65 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
- <!-- 针对404错误处理页面 -->
- <error-page>
- 	<error-code>404</error-code>
- 	<location>/ErrorPage/404Error.jsp</location>
- </error-page>
+  <filter>
+    <filter-name>FilterDemo1</filter-name>
+    <filter-class>com.frankstar.study.servlet4.FilterDemo1</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>FilterDemo1</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <filter>
+    <description>FilterDemo2过滤器</description>
+    <filter-name>FilterDemo2</filter-name>
+    <filter-class>com.frankstar.study.servlet4.FilterDemo2</filter-class>
+    <init-param>
+      <description>配置filter过滤器的初始化参数</description>
+      <param-name>name</param-name>
+      <param-value>frankstar</param-value>
+    </init-param>
+    <init-param>
+      <description>配置filter过滤器的初始化参数</description>
+      <param-name>like</param-name>
+      <param-value>java</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>FilterDemo2</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <filter>
+    <filter-name>CharacterEncodingFilter</filter-name>
+    <filter-class>com.frankstar.study.servlet4.CharacterEncodingFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>CharacterEncodingFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+  <listener>
+  	<description>HttpSessionListener监听器</description>
+  	<listener-class>com.frankstar.study.servlet4.MyHttpSessionListener</listener-class>
+  </listener>
+  <session-config>
+  	<session-timeout>1</session-timeout>
+  </session-config>
   <error-page>
- 	<error-code>500</error-code>
- 	<location>/ErrorPage/500Error.jsp</location>
- </error-page>
+    <error-code>404</error-code>
+    <location>/ErrorPage/404Error.jsp</location>
+  </error-page>
+  <error-page>
+    <error-code>500</error-code>
+    <location>/ErrorPage/500Error.jsp</location>
+  </error-page>
+  <servlet>
+  	<servlet-name>ServletDemoN</servlet-name>
+    <servlet-class>com.frankstar.study.servlet4.ServletDemoN</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ServletDemoN</servlet-name>
+    <url-pattern>/servlet/ServletDemoN</url-pattern>
+  </servlet-mapping>
   <servlet>
     <servlet-name>ServletDemo1</servlet-name>
     <servlet-class>com.frankstar.servlet.study.ServletDemo1</servlet-class>
@@ -34,15 +84,6 @@
     <servlet-name>ServletDemo1</servlet-name>
     <url-pattern>/3.php</url-pattern>
   </servlet-mapping>
-  <!-- <servlet>
-    <servlet-name>ServletDemo2</servlet-name>
-    <servlet-class>com.frankstar.servlet.study.ServletDemo2</servlet-class>
-    <load-on-startup>1</load-on-startup>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>ServletDemo2</servlet-name>
-    <url-pattern>/</url-pattern>
-  </servlet-mapping> -->
   <servlet>
     <servlet-name>ServletDemo3</servlet-name>
     <servlet-class>com.frankstar.servlet.study.ServletDemo3</servlet-class>

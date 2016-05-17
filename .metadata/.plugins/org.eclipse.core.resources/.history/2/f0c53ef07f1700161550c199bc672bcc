@@ -1,0 +1,82 @@
+/**
+ * 
+ */
+package com.frankstar.sort;
+
+/**
+ * @author frankstar
+ * 思想：每步将一个待排序的记录，按其顺序码大小插入到前面已经排序的字序列的合适位置，直到全部插入完毕
+ * 直接插入排序：从后向前找到合适的位置插入
+ * 二分插入排序
+ * 希尔排序
+ */
+public class InsetSort {
+	
+	private static int[] arr = {49,38,65,97,76,13,27,49,78,34,12,64,1};
+	public static void directInsertSort(int[] arr) {
+		System.out.println("排序前的数组为：");
+		for (int i = 0; i < arr.length; i++) {
+			System.out.print(arr[i] + " ");
+		}
+		//直接插入排序
+		for (int i = 1; i < arr.length; i++) {
+			//待插入元素
+			int temp = arr[i];
+			int j;
+			for (j = i-1; j >= 0; j--){
+				//将大于temp的往后移一位
+				if (arr[j] > temp){
+					arr[j+1] = arr[j];
+				} else {
+					break;
+				}
+			}
+			arr[j+1] = temp;
+		}
+		System.out.println();
+		System.out.println("排序后：");
+		for (int i = 0; i < arr.length; i++) {
+			System.out.print(arr[i] + " ");
+		}
+	}
+	public static void binaryInsertSort(int[] arr) {
+		//按二分法找到合适的位置插入 可以减少比较的次数
+		System.out.println("排序前：");
+		for (int i = 0; i < arr.length; i++) {
+			System.out.print(arr[i] + " ");
+		}
+		for (int i = 0; i < arr.length; i++) {
+			int temp = arr[i];
+			int left = 0;
+			int right = i - 1;
+			int middle = 0;
+			while (left <= right) {
+				middle = (left + right)/2; //折中，取中间位置
+				if (temp < arr[middle]) { //判断要插入的元素和中间元素的大小
+					right = middle - 1; //中间元素大，最高位置取当前中间位置的前一位，重新再求中间位置
+				} else {
+					left = middle + 1; //中间位置小，最低位置取当前中间位置的后一位，重新再求中间位置
+				}
+			}
+//			System.out.println();
+//			System.out.println("left:" + left + "\tmiddle:" + middle + "\t" + "right:" + right);
+			for ( int j = i-1; j > right; j--) {//将right＋1~i的所有元素后移一位
+				arr[j+1] = arr[j]; 
+			}
+			arr[left] = temp;
+		}
+		System.out.println();
+		System.out.println("排序后：");
+		for (int i = 0; i < arr.length; i++) {
+			System.out.print(arr[i] + " ");
+		}
+		
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+//		directInsertSort(InsetSort.arr);
+		binaryInsertSort(InsetSort.arr);
+
+	}
+
+}

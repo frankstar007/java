@@ -1,7 +1,0 @@
-package com.frankstar.Spring;
-
-public class Property {
-	private String name;
-	private String ref;
-
-}

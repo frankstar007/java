@@ -1,0 +1,41 @@
+package me.frankstar.JSPstudy2;
+
+import java.io.IOException;
+
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+@WebServlet("/TextServlet")
+public class TextServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    
+    public TextServlet() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+    
+    public void init(ServletConfig arg0) throws ServletException {
+    	System.out.println("执行init方法！");
+    }
+    public void service(ServletRequest arg0, ServletResponse arg1) throws ServletException,IOException {
+    	System.out.println("执行service方法！");
+    }
+	public void destory() {
+		System.out.println("执行destory方法!");
+	}
+	public ServletConfig getServletConfig() {
+		return null;
+	}
+	public String getServletInfo() {
+		return null;
+	}
+
+}

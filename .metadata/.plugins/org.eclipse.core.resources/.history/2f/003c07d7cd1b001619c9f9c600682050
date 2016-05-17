@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>学生基本信息</title>
+</head>
+<body>
+	<form action="StidentInfo" name="myForm" method="post">
+		姓名：<input type="text" name="sname"><br>
+	</form>
+</body>
+</html>

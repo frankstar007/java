@@ -1,0 +1,15 @@
+/**
+ * 
+ */
+package com.frankstar.javaStudy1;
+
+/**
+ * @author frankstar
+ *
+ */
+public class Car {
+	private String brand;
+	private String color;
+	private int maxSpeed;
+
+}

@@ -1,5 +1,0 @@
-package com.frankstar.Study;
-
-public class UserServiceImpl implements UserService{
-
-}
